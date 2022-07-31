@@ -11,10 +11,12 @@ export default function middleware(req: NextRequest) {
   const hostname = req.headers.get("host") || "";
 
   const inLocal = "localhost:5000";
-  const inProd = "multi-wedding.vercel.app";
+  const inProd = "https://multi-wedding.vercel.app/";
 
   const parts = hostname.split(".");
   const subdomain = parts.shift();
+
+  console.log("Middleware jojo: ", { hostname, subdomain });
   // const upleveldomain = parts.join(".");
 
   // detection when user came to default path
