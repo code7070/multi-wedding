@@ -16,11 +16,21 @@ export default function middleware(req: NextRequest) {
   const parts = hostname.split(".");
   const subdomain = parts.shift();
 
+  const currentHost =
+    process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
+      ? hostname.replace(`.${inProd}`, "")
+      : hostname.replace(`.${inLocal}`, "");
+
   console.log("Middleware jojo: ", { hostname, subdomain });
   // const upleveldomain = parts.join(".");
 
   // detection when user came to default path
-  if (subdomain === inLocal || subdomain === inProd || pathname === inProd) {
+  if (
+    subdomain === inLocal ||
+    subdomain === inProd ||
+    pathname === inProd ||
+    hostname === inProd
+  ) {
     url.pathname = `/${pathname}`;
   } else {
     //detection when user came with suburl
