@@ -20,7 +20,7 @@ export default function middleware(req: NextRequest) {
   // const upleveldomain = parts.join(".");
 
   // detection when user came to default path
-  if (subdomain === inLocal || subdomain === inProd) {
+  if (subdomain === inLocal || subdomain === inProd || pathname === inProd) {
     url.pathname = `/${pathname}`;
   } else {
     //detection when user came with suburl
