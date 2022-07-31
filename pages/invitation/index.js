@@ -42,15 +42,16 @@ export default function Invitation(props) {
   else if (data && Object.keys(data).length > 0)
     view = <InvitationCard {...props} />;
 
-  const nameTitle = `${data.groom.name} ${
-    data.groom.title ? data.groom.title : ""
-  }`;
+  const nameTitle =
+    data && data !== "empty"
+      ? `${data.groom.name} ${data.groom.title ? data.groom.title : ""}`
+      : "Not Found";
 
   return (
     <div className={Style.container}>
       <MetaHead
         title={`Undangan - ${nameTitle}`}
-        description={`Ini adalah undangan pernikahan ${data.groom.name}`}
+        description={`Ini adalah undangan pernikahan ${nameTitle}`}
       />
       <main className={Style.main}>
         <Alert.Success text="YoohoOo~ Kamu ada di halaman undangan" />
