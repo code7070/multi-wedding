@@ -5,7 +5,7 @@ export const config = {
   matcher: ["/"],
 };
 
-export default function middleware(req: NextRequest) {
+export default function middleware(req = NextRequest) {
   const url = req.nextUrl.clone();
   const { pathname } = req.nextUrl;
   const hostname = req.headers.get("host") || "";
@@ -25,12 +25,7 @@ export default function middleware(req: NextRequest) {
   // const upleveldomain = parts.join(".");
 
   // detection when user came to default path
-  if (
-    subdomain === inLocal ||
-    subdomain === inProd ||
-    pathname === inProd ||
-    hostname === inProd
-  ) {
+  if (subdomain === inLocal || subdomain === inProd || pathname === inProd) {
     url.pathname = `/${pathname}`;
   } else {
     //detection when user came with suburl

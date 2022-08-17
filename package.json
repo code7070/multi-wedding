@@ -6,7 +6,8 @@
     "dev": "next dev -p 5000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pushAll": "git add . && git commit -m 'pushAll' && git push"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.35.4",
