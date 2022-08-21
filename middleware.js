@@ -40,5 +40,7 @@ export default function middleware(req = NextRequest) {
     url.pathname = `/invitation${pathname}`;
   }
 
+  console.log("MIDDLEWARE REWRITTEN: ", url);
+
   return NextResponse.rewrite(url);
 }
