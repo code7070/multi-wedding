@@ -12,7 +12,7 @@ export default function middleware(req = NextRequest) {
 
   const inLocal = "localhost:5000";
   const inProd = "multi-wedding.vercel.app";
-  const inDomain = "www.zupet.id";
+  const inDomain = "www.pengen-nikah.my.id";
 
   const parts = hostname.split(".");
   const subdomain = parts.shift();
