@@ -12,6 +12,7 @@ export default function middleware(req = NextRequest) {
 
   const inLocal = "localhost:5000";
   const inProd = "multi-wedding.vercel.app";
+  const inDomain = "zupet.id";
 
   const parts = hostname.split(".");
   const subdomain = parts.shift();
@@ -29,7 +30,9 @@ export default function middleware(req = NextRequest) {
     subdomain === inLocal ||
     subdomain === inProd ||
     pathname === inProd ||
-    hostname === inProd
+    hostname === inProd ||
+    pathname === inDomain ||
+    hostname === inDomain
   ) {
     url.pathname = `/${pathname}`;
   } else {
