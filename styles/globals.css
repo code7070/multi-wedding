@@ -6,8 +6,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -18,8 +20,7 @@ a {
 * {
   box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -27,4 +28,87 @@ a {
     color: white;
     background: black;
   }
+} */
+
+/* PENGEN NIKAH STYLING */
+:root {
+  --font-semibold: 500;
+  --font-bold: 600;
+
+  --white: #efefef;
+  --light-green: #b6cbbf;
+  --leaf-green: #639377;
+  --main-green: #256c42;
+  --dark-green: #1a4a2e;
+  --black-green: #0e2a19;
+}
+
+html,
+body {
+  background: var(--light-green);
+  min-height: 100vh;
+  color: var(--black-green);
+}
+
+/* COLORING CLASSNAME HELPER */
+.color-green {
+  color: var(--main-green);
+}
+
+.color-green-lightest {
+  color: var(--light-green);
+}
+
+.color-green-light {
+  color: var(--leaf-green);
+}
+
+.color-green-dark {
+  color: var(--dark-green);
+}
+
+.color-green-darken {
+  color: var(--black-green);
+}
+
+/* BACKGROUND CLASSNAME HELPER */
+.bg-green {
+  background-color: var(--main-green);
+}
+
+.bg-green-lightest {
+  background-color: var(--light-green);
+}
+
+.bg-green-light {
+  background-color: var(--leaf-green);
+}
+
+.bg-green-dark {
+  background-color: var(--dark-green);
+}
+
+.bg-green-darken {
+  background-color: var(--black-green);
+}
+
+/* BORDER COLOR CLASSNAME HELPER */
+.border-green {
+  border-color: var(--main-green);
+}
+
+.border-green-lightest {
+  border-color: var(--light-green);
+}
+
+.border-green-light {
+  border-color: var(--leaf-green);
+}
+
+.border-green-dark {
+  border-color: var(--dark-green);
+}
+
+.border-green-darken {
+  border-color: var(--black-green);
 }

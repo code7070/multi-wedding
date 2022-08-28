@@ -10,12 +10,16 @@
     "pushAll": "git add . && git commit -m 'pushAll' && git push"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.7",
     "@supabase/supabase-js": "^1.35.4",
     "daisyui": "^2.20.0",
+    "html5-device-mockups": "^3.2.1",
     "next": "12.2.3",
     "react": "18.2.0",
+    "react-device-mockups": "^0.1.12",
     "react-dom": "18.2.0",
-    "sass": "^1.54.0"
+    "sass": "^1.54.5",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
