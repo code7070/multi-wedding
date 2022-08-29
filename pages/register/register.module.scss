@@ -1,0 +1,13 @@
+.register {
+  position: relative;
+}
+
+.photo {
+  position: relative;
+  // border: 2px solid red;
+
+  span,
+  img {
+    display: block !important;
+  }
+}

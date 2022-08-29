@@ -10,7 +10,7 @@ const lists = {
   ChevronRight: ChevronRightIcon,
 };
 
-export default function Icon({ icon, size = "regular", spaceLeft }) {
+export default function Icon({ icon, size = "regular", spaceLeft, className }) {
   const TheIcon = lists[icon];
 
   let sizing = `6`;
@@ -20,7 +20,9 @@ export default function Icon({ icon, size = "regular", spaceLeft }) {
 
   return (
     <TheIcon
-      className={`${classSize}  ${spaceLeft ? `ml-${spaceLeft}` : ""}`}
+      className={`${classSize}  ${
+        spaceLeft ? `ml-${spaceLeft}` : ""
+      } ${className}`}
     />
   );
 }

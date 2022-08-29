@@ -17,10 +17,10 @@ export default function middleware(req = NextRequest) {
   const parts = hostname.split(".");
   const subdomain = parts.shift();
 
-  const currentHost =
-    process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
-      ? hostname.replace(`.${inProd}`, "")
-      : hostname.replace(`.${inLocal}`, "");
+  // const currentHost =
+  //   process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
+  //     ? hostname.replace(`.${inProd}`, "")
+  //     : hostname.replace(`.${inLocal}`, "");
 
   console.log("Middleware jojo: ", { hostname, subdomain });
   // const upleveldomain = parts.join(".");
@@ -34,10 +34,10 @@ export default function middleware(req = NextRequest) {
     pathname === inDomain ||
     hostname === inDomain
   ) {
-    url.pathname = `/${pathname}`;
+    url.pathname = pathname;
   } else {
     //detection when user came with suburl
-    url.pathname = `/invitation${pathname}`;
+    url.pathname = `/_invitation${pathname}`;
   }
 
   console.log("MIDDLEWARE REWRITTEN: ", url);

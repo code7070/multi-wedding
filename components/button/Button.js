@@ -1,4 +1,6 @@
-const modelClass = (model) => {
+import Link from "next/link";
+
+const modelCls = (model) => {
   const lists = ["btn-primary", "btn-secondary", "btn-error"];
   return lists.find((l) => l.includes(model));
 };
@@ -13,21 +15,30 @@ export default function Button({
   wide,
   asLink,
   asHref,
+  loading,
+  className = "",
 }) {
-  const tclass = `btn ${modelClass(model)} btn-${size} ${
-    wide ? "btn-wide" : ""
-  }`;
+  const wideClass = `${wide ? "btn-wide" : ""}`;
+  const isLoading = loading ? "loading" : "";
+  const tclass = `btn ${modelCls(model)} btn-${size} ${wideClass} ${isLoading}`;
+  const btnClass = `${tclass} ${className}`;
 
-  if (asHref)
+  if (asLink)
     return (
-      <a href={asHref} className={tclass}>
+      <Link href={asLink} className={btnClass}>
+        {children}
+      </Link>
+    );
+  else if (asHref)
+    return (
+      <a href={asHref} className={btnClass}>
         {children}
       </a>
     );
 
   return (
     <button
-      className={tclass}
+      className={btnClass}
       type={type}
       onClick={onClick}
       disabled={disabled}

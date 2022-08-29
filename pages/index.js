@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Homepage from "../pagesview/homepage/Homepage";
 import styles from "../styles/Home.module.css";
 import "swiper/css";
 import "html5-device-mockups/dist/device-mockups.min.css";
+import Homepage from "../components/homepage/Homepage";
 
 export const MetaHead = ({
   title = "Pengen Nikah",
