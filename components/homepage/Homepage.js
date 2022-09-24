@@ -3,46 +3,6 @@ import Button from "../../components/button/Button";
 import Icon from "../../components/icons";
 import HomepageSlider from "./HomepageSlider";
 
-// const helpful = [
-//   "Buatin undangan digital",
-//   "Cariin venue",
-//   "Pilihin tenda",
-//   "Cariin catering",
-//   "Ngasitau Wedding Organizer",
-//   "Urusin semua? Boleh!",
-// ];
-
-// SwiperCore.use([Autoplay]);
-
-// const WordingSlide = () => {
-//   const helpful = [
-//     "Undang hingga 1000 tamu",
-//     "Pilih tema  sesuka kamu",
-//     "Beda tamu beda undangan, bisa!",
-//   ];
-
-//   const classchanger =
-//     "text-2xl color-green-darken border-b-2 font-semibold border-green leading-10";
-
-//   return (
-//     <div className="mb-8">
-//       <Swiper
-//         direction="vertical"
-//         autoplay={autoplayOptions}
-//         slidesPerView={1}
-//         style={{ height: "40px" }}
-//         loop
-//       >
-//         {helpful.map((h) => (
-//           <SwiperSlide key={h}>
-//             <span className={classchanger}>{h}</span>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-//     </div>
-//   );
-// };
-
 const Homepage = () => {
   const { push } = useRouter();
   return (
@@ -53,14 +13,15 @@ const Homepage = () => {
             <h2 className="text-5xl font-semibold color-dark-green mb-10">
               Pengen Nikah?
             </h2>
-            <div className="text-xl font-medium color-dark-green mb-6 leading-7">
+            {/* <div className="text-xl font-medium color-dark-green mb-6 leading-7">
               Buat undangan pernikahanmu di sini,
               <br />
               dapatkan beragam kelebihan
-            </div>
+            </div> */}
             {/* <WordingSlide /> */}
             <h3 className="text-xl font-medium color-dark-green mb-8 leading-7">
               Undang orang-orang ke pernikahan Anda dengan cara yang menarik.
+              <br />
               <br />
               <span>Undanganmu, semaumu.</span>
             </h3>
