@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useJwt, decodeToken } from "react-jwt";
@@ -7,7 +8,6 @@ import Button from "../../components/button/Button";
 import Icon from "../../components/icons";
 import style from "./register.module.scss";
 import { getCookie, setCookie } from "../../helpers/utils";
-import { useEffect, useState } from "react";
 
 export default function Register() {
   const [view, setView] = useState("button");
