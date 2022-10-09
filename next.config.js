@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ["placeimg.com", "picsum.photos"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
